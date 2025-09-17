@@ -8,7 +8,7 @@ on:
 jobs:
   if-test:
     runs-on: ubuntu-latest
-    outputs:
+    steps:
       - name: develop 브랜치일 때만 실행
         if: github.ref == 'refs/heads/develop'
         run: echo "develop 브랜치에 푸시되었고, Staging 환경에 배포합니다."

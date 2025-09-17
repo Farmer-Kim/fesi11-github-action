@@ -9,4 +9,3 @@ jobs:
       - name: first step
         run: echo "excuting first step"
 
-      - name: many command statements writing

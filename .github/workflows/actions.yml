@@ -1,17 +1,22 @@
-name: Github Actions pratice
-
+name: Github Actions로 테스트 자동화하기
 on: push
 
 jobs:
-  push-job:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: first step
-        run: echo "excuting first step"
+      - name: Github Repository 파일 불러오기
+        uses: actions/checkout@v4
 
-      - name: github 저장 변수 사용
-        run: |
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
+      - name: Node.js 설치
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 의존성(라이브러리) 설치
+        run: npm ci
+
+      - name: 테스트 실행하기
+        run: npm run test
 
           

@@ -19,4 +19,7 @@ jobs:
       - name: 테스트 실행하기
         run: npm run test
 
-          
+      - name: 이건 몇 번째 레슨
+        run: |
+          echo "1번째 레슨"
+          echo "두 번째 레슨"

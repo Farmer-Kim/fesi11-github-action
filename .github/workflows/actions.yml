@@ -9,3 +9,9 @@ jobs:
       - name: first step
         run: echo "excuting first step"
 
+      - name: github 저장 변수 사용
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+
+          

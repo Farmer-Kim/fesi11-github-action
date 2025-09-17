@@ -26,7 +26,6 @@ jobs:
 
       - name: 테스트 실행하기
         run: npm run test
-
       
         
         
